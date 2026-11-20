@@ -1,11 +1,16 @@
 # Software Design Document (SDD)
 
+> Versión inicial. Complementada por los documentos detallados de arquitectura, features y ADR en `docs/`.
+
 ## 1. Información del proyecto
 
 - Nombre: Vital Express
-- Tipo: Sistema de control y monitoreo operativo para móviles y solicitudes de usuarios
-- Contexto: despliegue en la nube
-- Fecha: 2026-11-14
+- Tipo: plataforma cloud de despacho y monitoreo para servicios médicos
+- Núcleo operacional: app móvil para tripulaciones
+- Vista de despacho: portal React existente
+- Back-end: API Python/FastAPI
+- Contexto: despliegue cloud con datos simulados o anonimizados
+- Fecha: 2026-11-20
 
 ## 2. Resumen ejecutivo
 

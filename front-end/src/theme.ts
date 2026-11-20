@@ -1,0 +1,17 @@
+export const theme = {
+  accent: '#1470C0',
+  navy: '#0B1F3A',
+  bg: '#EEF3F8',
+  card: '#FFFFFF',
+  text: '#0B1F3A',
+  muted: '#5B6B80',
+  border: '#DCE4EE',
+  field: '#F8FAFC',
+  accentSoft: '#E8F2FB',
+  u1: '#C23434',
+  u1Soft: '#FBEAEA',
+  u2: '#A87300',
+  u2Soft: '#FBF3DF',
+  u3: '#22805A',
+  u3Soft: '#E4F3EB',
+};

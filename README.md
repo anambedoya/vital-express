@@ -1,20 +1,37 @@
 # Vital Express
 
-Sistema de centro de control y monitoreo para móviles y solicitudes de usuarios, con un mapa interactivo en tiempo real, priorización de servicios y recomendación asistida por IA para la asignación de ambulancias.
+Sistema cloud para apoyar el despacho inteligente de móviles y servicios médicos. La app móvil es el núcleo operativo de las tripulaciones; el portal web existente usado por el despachador se integra como vista externa de control.
 
 ## Estructura del proyecto
 
-- `front-end/`: aplicación React para la interfaz del sistema
-- `back-end/`: API en Python con servicios de IA y lógica de negocio
-- `docs/SDD.md`: documento de diseño de software (SDD)
+- `back-end/`: API Python y lógica central, incluyendo prioridad, asignación e IA
+- `front-end/`: referencia de clientes web React; el portal operativo seguirá siendo la página existente
+- `docs/`: SDD, arquitectura, feature specifications y decisiones técnicas
 
-## Visión general
+## Arquitectura principal
 
-El sistema centraliza la operación de servicios médicos de emergencia, mostrando en tiempo real la ubicación de móviles, el estado de cada solicitud y los tiempos relevantes para la toma de decisiones. La prioridad de cada servicio se gestiona mediante una cola reordenada por urgencia, y la recomendación de asignación se apoya en un modelo de redes neuronales entrenado con datos de la empresa prestadora de servicios médicos.
+- App móvil: operaciones de disponibilidad, ubicación, asignación y estado del servicio
+- Portal React existente: mapa, cola, cronograma y confirmación humana por el despachador
+- Back-end FastAPI: fuente central de verdad, prioridad, recomendaciones y eventos
+- IA: modelo auxiliar para ranking de móviles; no reemplaza la decisión del despachador
 
-## Siguientes pasos
+## Documentación
 
-- Definir requisitos detallados de negocio
-- Formalizar procesos de priorización y despacho
-- Entrenar y validar el modelo de IA
-- Conectar front-end y back-end con APIs y eventos en tiempo real
+- Índice técnico: `docs/README.md`
+- Documento de diseño: `docs/SDD.md`
+- Contexto empresarial: `docs/sources/empresa-vitalexpress.md`
+- Arquitectura: `docs/architecture/`
+- Features: `docs/features/`
+- Decisiones: `docs/adr/`
+
+## Restricciones iniciales
+
+El prototipo utiliza datos simulados o anonimizados y no integra ambientes institucionales de producción. No se deben incorporar datos reales de afiliados, historia clínica ni direcciones exactas.
+
+## Próximos pasos
+
+- Validar contratos del portal web existente
+- Definir la plataforma móvil
+- Documentar las features críticas
+- Formalizar reglas de urgencia y compatibilidad móvil-servicio
+- Entrenar y evaluar el modelo con datos validados por la empresa
